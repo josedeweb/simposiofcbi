@@ -1,0 +1,22 @@
+doctype 5
+html(lang="es")
+	head
+		link(rel="stylesheet", href="style.css")
+		script(src="jquery.js")
+		script(src="socket.io/socket.io.js")		
+		script(src="main.js")
+	body
+		h1 #{titulo}	
+		h2 Monitor de sensores web con nodejs y socketio		
+		div#temperature(class="section")
+			p Temperatura
+			span(class="value")
+		div#light(class="section")
+			p Luz
+			span(class="value")
+		div#voice(class="section")
+			input#mic(x-webkit-speech='' onwebkitspeechchange = "led(this.value)")
+
+		figure
+			img(src="green.png")
+			figcaption "ESTADO DEL LED"
